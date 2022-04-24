@@ -1,0 +1,12 @@
+{
+  "name": "javascript-concept",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "repository": "git@github.com:abrcdf1023/javascript-concept.git",
+  "author": "SP_Penguin <abrcdf1023@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/index.js"
+  }
+}
