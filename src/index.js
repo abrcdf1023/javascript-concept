@@ -11,6 +11,43 @@ logBlock("Closure", () => {
 
   const f = foo() // `secret` is not directly accessible from outside `foo`
   f() // The only way to retrieve `secret`, is to invoke `f`
+
+  // How to Use Closure
+  function creatCat() {
+    let name = "花滑"
+    let age = 5
+
+    const setName = function(val) {
+      name = val
+    }
+
+    const getName = function() {
+      return name
+    }
+
+    const setAge = function(val) {
+      age = val
+    }
+    
+    const getAge = function() {
+      return age
+    }
+
+    return {
+      getName,
+      setName,
+      getAge,
+      setAge
+    }
+  }
+  
+  const Cat = creatCat()
+  console.log(Cat.getName())
+  console.log(Cat.getAge())
+  Cat.setName("小花")
+  Cat.setAge(6)
+  console.log(Cat.getName())
+  console.log(Cat.getAge())
 })
 
 logBlock("Block Scope", () => {
